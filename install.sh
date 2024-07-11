@@ -21,9 +21,9 @@ echo "Python version : $python_version"
 
 BASEDIR=$(pwd)
 
-$PYTHON_COMMAND -m venv "$BASEDIR/env"
+# $PYTHON_COMMAND -m venv "$BASEDIR/env"
 # shellcheck disable=SC1091
-source "$BASEDIR/env/bin/activate"
+# source "$BASEDIR/env/bin/activate"
 pip install torch==2.2.2 --index-url https://download.pytorch.org/whl/cpu
 if [[ "$1" == "--disable-gui" ]]; then
     #! For termux , we don't need Qt based GUI
